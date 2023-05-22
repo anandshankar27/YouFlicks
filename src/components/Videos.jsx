@@ -4,11 +4,11 @@ import { Stack, Box } from '@mui/material';
 import { VideoCard, ChannelCard } from './'
 
 const Videos = ({ videos }) => {
-    console.log(videos)
+    const myVideos = videos.filter(video => !video.id.kind.includes('playlist'));
     return (
         <Stack direction='row' flexWrap='wrap' justifyContent='start' gap={2}>
             {
-                videos.map((item, idx) => {
+                myVideos.map((item, idx) => {
                     return <Box key={idx}>
                         {item.id.videoId && <VideoCard video={item} />}
                         {item.id.channelId && <ChannelCard channelDetail={item} />}
