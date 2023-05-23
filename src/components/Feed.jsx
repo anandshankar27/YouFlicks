@@ -5,7 +5,7 @@ import { Sidebar, Videos } from './'
 import { fetchFromAPI } from '../utils/fetchFromAPI';
 
 const Feed = () => {
-    const [selectedCategory, setSelectedCategory] = useState('New');
+    const [selectedCategory, setSelectedCategory] = useState('Trending');
     const [videos, setVideos] = useState([]);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const Feed = () => {
                     setSelectedCategory={setSelectedCategory}
                 />
                 <Typography className='copyright' variant='body2' sx={{ mt: 1.5, color: 'grey' }}>
-                    Youtube Clone
+                    Youtube Clone by Anand
                 </Typography>
             </Box>
             <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2 }}>
