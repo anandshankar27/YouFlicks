@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 import { Sidebar, Videos } from '../../components'
 
-import { fetchFromAPI } from '../../utils/fetchFromAPI';
+import { fetchFromAPI } from '../../actions/fetchFromAPI';
 
 const Feed = () => {
     const [selectedCategory, setSelectedCategory] = useState('Trending');
